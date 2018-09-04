@@ -7,11 +7,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+        <a class="navbar-brand" href="index.html">BackOffice - Escambo-app</a>
     </div>
     <!-- /.navbar-header -->
 
     <ul class="nav navbar-top-links navbar-right">
+        <li><%= current_admin.email %></li>
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -48,7 +49,7 @@
                     <%end%>
                 </li>
                 <li>
-                  <%= link_to backoffice_admins_index_path do%>
+                  <%= link_to backoffice_admins_path do%>
                     <i class="fa fa-users fa-fw"></i> Administradores
                   <%end%>
                 </li>
