@@ -1,4 +1,18 @@
 namespace :utils do
+
+  desc "Setup development"
+  task detup_dev: :environment do
+    puts 'Executando o setup para desenvolvimento'
+      %x(rake db:drop)
+      %x(rake db:create)
+      %x(rake db:migrate)
+      %x(rake db:seed)
+      %x(rake utils:generate_admins)
+      %x(rake utils:generate_members)
+      %x(rake utils:generate_ads)
+    puts "Setup realizado com sucesso!"
+  end
+
   desc "Cria administradores fake"
   task generate_admins: :environment do
     puts 'Criando administradores fake'

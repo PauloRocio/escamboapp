@@ -13,3 +13,5 @@ categories.each do |category|
 end
 
 Admin.create!(name: 'Admin', email: "admin@admin.com", password: "123456", password_confirmation: "123456", role: 0)
+
+Member.create!(name: 'Member', email: "member@member.com", password: "123456", password_confirmation: "123456")
